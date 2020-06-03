@@ -52,7 +52,7 @@ Thread thread2;
 void FXOS8700CQ_readRegs(int addr, uint8_t * data, int len);
 void FXOS8700CQ_writeRegs(uint8_t * data, int len);
   
-void acc_call()  {
+void acc_call()  {  //calculate ACC value
     pc.baud(9600);
     
     uint8_t who_am_i, data[2], res[6];
@@ -98,7 +98,7 @@ void acc_call()  {
 
 void acc_thread(){
     
-    queue1.call(acc_call);
+    queue1.call(acc_call);  //call of Eventqueue
    
 }
 

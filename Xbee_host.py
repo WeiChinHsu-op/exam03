@@ -73,10 +73,10 @@ for a in range(0, int(Fs)):
     
     char = s.readline()
 
-    charx = char[0:9]
+    charx = char[0:9]  #x direction
     X[a] = float(charx)
 
-    chary = char[9:18]
+    chary = char[9:18] #y direction
     Y[a] = float(chary)
     
     print(char.decode())
